@@ -6,9 +6,21 @@ local M = {
 
 function M.config()
     local icons = require "user.icons"
+    local highlight = {
+        "RainbowRed",
+        "RainbowYellow",
+        "RainbowBlue",
+        "RainbowOrange",
+        "RainbowGreen",
+        "RainbowViolet",
+        "RainbowCyan",
+    }
 
     require("ibl").setup {
-        indent = { char = icons.ui.LineMiddle },
+        indent = {
+            char = icons.ui.LineMiddle,
+            highlight = highlight,
+        },
         whitespace = {
             remove_blankline_trail = true,
         },
